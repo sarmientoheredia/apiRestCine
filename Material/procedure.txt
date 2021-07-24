@@ -1,0 +1,12 @@
+DELIMITER $$
+create procedure sp_RegistrarEmpleado (
+IN _nombre VARCHAR(50),
+IN _apellido VARCHAR(50)
+)
+begin 
+insert into empleado (Nombre, Apellido, FechaContrat,IdEstado) 
+values (_nombre, _apellido, NOW(), 1);
+END$$
+
+
+DELIMITER ;
